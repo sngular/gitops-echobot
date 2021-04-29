@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echobot
+  namespace: gitops-series
+  labels:
+    name: echobot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: echobot
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        name: echobot
+    spec:
+      containers:
+        - image: ghcr.io/sngular/gitops-echobot:v0.1.0
+          name: echobot
+          env:
+            - name: CHARACTER
+              value: "Sngular utiliza GitOps con Flux en sus despliegues."
+
