@@ -22,8 +22,10 @@ hostname: 86f43c549bd4 - gitops flux series
 
 El funcionamiento de la aplicación puede ser modificado a través de variables de entorno:
 
-* `CHARACTER` modifica el final del mensaje impreso en pantalla.
-* `SLEEP_TIME` modifica el intervalo de tiempo entre mensajes.
+| Variable de entorno | Descripción                                     | Valor por defecto     |
+|---------------------|-------------------------------------------------|-----------------------|
+| `CHARACTER`         | Modifica el mensaje de impreso en la pantalla.  | "gitops flux series" |
+| `SLEEP_TIME`        | Modifica el intervalo de tiempo entre mensajes. | 1s                    |
 
 ```bash
 docker container run --rm \
