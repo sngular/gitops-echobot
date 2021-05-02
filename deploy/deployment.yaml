@@ -19,10 +19,10 @@ spec:
     spec:
       containers:
         - name: echobot
-          image: ghcr.io/sngular/gitops-echobot:v0.1.1
+          image: ghcr.io/sngular/gitops-echobot:v0.1.2
           env:
             - name: CHARACTER
-              value: "Sngular utiliza GitOps con Flux en sus despliegues. Tag v0.1.1 desplegado!"
+              value: "Sngular utiliza GitOps con Flux en sus despliegues. Tag v0.1.2 desplegado!"
             - name: SLEEP
               value: "3s"
           resources:
