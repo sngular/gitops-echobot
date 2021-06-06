@@ -1,11 +1,6 @@
----
-
-version: '3.8'
-
 services:
   mongodb:
     image: mongo
-    container_name: echobot-db
     restart: unless-stopped
     environment:
       MONGO_INITDB_DATABASE: echobot
@@ -18,7 +13,6 @@ services:
 
   mongodb-webui:
     image: mongo-express
-    container_name: mongodb-webui
     restart: unless-stopped
     environment:
       ME_CONFIG_MONGODB_SERVER: mongodb
@@ -30,11 +24,6 @@ services:
   echobot:
     build:
       context: .
-      dockerfile: Dockerfile
-    image: ghcr.io/sngular/gitops-echobot:v0.2.0
-    container_name: echobot
-    depends_on:
-      - mongodb
     restart: unless-stopped
     environment:
       OUTPUT_TYPE: "mongodb"
