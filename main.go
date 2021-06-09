@@ -86,7 +86,6 @@ func setConfig() (string, string, EchobotLogtrace, error) {
 	}
 
 	// message to treat
-	var message string
 	if len(os.Getenv("MESSAGE")) != 0 {
 		message = os.Getenv("MESSAGE")
 	}
