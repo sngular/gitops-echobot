@@ -33,7 +33,7 @@ El funcionamiento de la aplicación puede ser modificado a través de variables 
 Para ver su funcionamiento utilice el siguiente comando:
 
 ```bash
-docker container run --rm ghcr.io/sngular/gitops-echobot:v0.2.0
+docker container run --rm ghcr.io/sngular/gitops-echobot:v0.2.2
 
 hostname: 86f43c549bd4 - Gitops Flux series!
 hostname: 86f43c549bd4 - Gitops Flux series!
@@ -50,7 +50,7 @@ docker container run --rm \
   --env MONGODB_URI="mongodb://test:1234@localhost:27017" \
   --env MONGODB_DATABASE="echobot" \
   --env MONGODB_COLLECTION="log" \
-  ghcr.io/sngular/gitops-echobot:v0.2.0
+  ghcr.io/sngular/gitops-echobot:v0.2.2
 
 Traza insertada en base de datos (507f1f77bcf86cd799439011): 680c3892c04c - Sngular utiliza Gitops en sus entornos
 Traza insertada en base de datos (757f191a810c19729de860ae): 680c3892c04c - Sngular utiliza Gitops en sus entornos
